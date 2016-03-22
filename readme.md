@@ -34,7 +34,7 @@ Starts off initializing the first three fields:
     Liverpool (red) or Everton (blue).
 
 The last field uses a Setter to identify what the salary is of the person being
-surveyed.
+surveyed. This would be a private attribute.
 
 ##########################################
 
