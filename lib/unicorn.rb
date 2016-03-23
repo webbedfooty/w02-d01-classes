@@ -3,21 +3,14 @@
 
 class Unicorn
 
-  attr_reader :name :powers :country_of_origin
+  attr_reader :name :powers :country
+  attr_writer :rank
 
-  def initialize(name, powers, country_of_origin, rank)
-    @name             =name
-    @powers           =powers
-    @country_of_origin=country_of_origin
-    @rank             =rank
-  end
-
-  def powers
-    @powers
-  end
-
-  def country_of_origin
-    @country_of_origin
+  def initialize(options{})
+    @name    = options[:name]
+    @powers  = options[:powers]
+    @country = options[:country]
+    @rank    = options[:rank]
   end
 
   def rank=(new_rank)
