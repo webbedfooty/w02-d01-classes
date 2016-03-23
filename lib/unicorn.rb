@@ -2,8 +2,7 @@
 require "pry"
 
 class Unicorn
-
-  attr_accessor :name, :powers, :country :rank
+  attr_accessor :name, :powers, :country, :rank
 
   def initialize(options={})
     @name    = options[:name]
