@@ -1,20 +1,18 @@
 # unicorn.rb
-
+require "pry"
 
 class Unicorn
 
-  attr_reader :name :powers :country
+  attr_reader :name, :powers, :country
   attr_writer :rank
 
-  def initialize(options{})
+  def initialize(options={})
     @name    = options[:name]
     @powers  = options[:powers]
     @country = options[:country]
     @rank    = options[:rank]
   end
 
-  def rank=(new_rank)
-    @rank = new_rank
-  end
-
 end
+
+binding.pry
