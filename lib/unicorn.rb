@@ -3,8 +3,7 @@ require "pry"
 
 class Unicorn
 
-  attr_reader :name, :powers, :country
-  attr_writer :rank
+  attr_accessor :name, :powers, :country :rank
 
   def initialize(options={})
     @name    = options[:name]
