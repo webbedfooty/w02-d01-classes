@@ -30,11 +30,12 @@ end
 
 def report_all_unicorns(arr)
   puts "National Unicorn Repository"
-  if !unicorns.empty?
-  puts "You have #{unicorns.length} unicorn(s)."
-  arr.each do |unicorn|
-    unicorn_report(unicorn)
-    end
+  if !arr.empty?
+
+  puts "You have #{arr.length} unicorn(s)."
+    arr.each do |unicorn|
+      unicorn_report(unicorn)
+      end
   else
     puts "We don't have any registered unicorns."
   end
