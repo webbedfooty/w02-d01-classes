@@ -1,5 +1,5 @@
 require "pry"
-require_relative "unicorn.rb"
+require_relative "lib/unicorn.rb"
 
 
 def tag_a_unicorn
