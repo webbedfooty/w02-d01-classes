@@ -3,7 +3,8 @@ require_relative "unicorn.rb"
 
 
 def tag_a_unicorn
-  puts "\n\n\nYe Olde Unicorn Smithy"
+  puts "\n\n\nWelcome to Ye Olde
+  Unicorn Smithy\n\n"
   print "What is the name of your Unicorn? "
   name = gets.chomp
 
@@ -26,8 +27,6 @@ def unicorn_report(unicorn)
   puts "Your Unicorn comes from #{unicorn.country}. Poor thing."
   puts "Your Unicorn holds the rank of #{unicorn.rank}. Good for her! Him? Whatevs"
 end
-
-
 
 def report_all_unicorns(arr)
   arr.each do |unicorn|
@@ -58,4 +57,28 @@ def select_a_unicorn(unicorns)
   end
 
   unicorn
+end
+
+unicorns = []
+choice = 3
+
+puts "National Unicorn Repository\n\n"
+
+while choice != 0
+  puts "\n\nYou have #{unicorns.length} unicorn(s)."
+  puts "\nHere are your options:\n1. New Unicorn\n2. Unicorns Report\n0. Exit"
+  print "What is your choice? "
+  choice = gets.chomp.to_i
+
+  # MAIN MENU
+  if choice == 1
+    unicorns << tag_a_unicorn
+    unicorn_report(unicorns.last)
+  elsif choice == 2
+    report_all_unicorns(unicorns)
+  elsif choice == 0
+    puts "\n\nGoodbye!"
+  else
+    puts "\n\nSorry! Not a valid input"
+  end
 end
