@@ -1,6 +1,6 @@
 require "pry"
-require_relative "lib/bear.rb"
-require_relative "lib/farm.rb"
+require_relative "unicorn.rb"
+
 
 def tag_a_unicorn
   puts "\n\n\nYe Olde Unicorn Smithy"
