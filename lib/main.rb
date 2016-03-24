@@ -3,8 +3,8 @@ require_relative "unicorn.rb"
 
 
 def tag_a_unicorn
-  puts "\n\n\nWelcome to Ye Olde
-  Unicorn Smithy\n\n"
+  puts "\n\n\nWelcome to Ye Olde"
+  puts "Unicorn Smithy\n\n"
   print "What is the name of your Unicorn? "
   name = gets.chomp
 
@@ -22,10 +22,10 @@ end
 
 def unicorn_report(unicorn)
   puts "\n\n\nUnicorn Intel\n"
-  puts "Your Unicorn is named #{unicorn.name}. Nice."
-  puts "Your Unicorn has #{unicorn.powers} powers. Fancy that."
-  puts "Your Unicorn comes from #{unicorn.country}. Poor thing."
-  puts "Your Unicorn holds the rank of #{unicorn.rank}. Good for her! Him? Whatevs"
+  puts "Your Unicorn is named #{unicorn.name}."
+  puts "Your Unicorn has #{unicorn.powers} powers."
+  puts "Your Unicorn comes from #{unicorn.country}."
+  puts "Your Unicorn holds the rank of #{unicorn.rank}."
 end
 
 def report_all_unicorns(arr)
@@ -60,13 +60,13 @@ def select_a_unicorn(unicorns)
 end
 
 unicorns = []
-choice = 3
+choice = 5
 
 puts "National Unicorn Repository\n\n"
 
 while choice != 0
   puts "\n\nYou have #{unicorns.length} unicorn(s)."
-  puts "\nHere are your options:\n1. New Unicorn\n2. Unicorns Report\n0. Exit"
+  puts "\nHere are your options:\n1. New Unicorn\n2. Unicorns Report\n3. Review a specific Unicorn\n0. Exit"
   print "What is your choice? "
   choice = gets.chomp.to_i
 
@@ -76,6 +76,8 @@ while choice != 0
     unicorn_report(unicorns.last)
   elsif choice == 2
     report_all_unicorns(unicorns)
+  elsif choice == 3
+    select_a_unicorn(unicorns)
   elsif choice == 0
     puts "\n\nGoodbye!"
   else
